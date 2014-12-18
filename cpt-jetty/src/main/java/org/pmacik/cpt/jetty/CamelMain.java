@@ -11,19 +11,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class CamelMain {
 
 	public static void main(String[] args) throws Exception {
-		final ApplicationContext context = new ClassPathXmlApplicationContext(
-				new String[] {"META-INF/spring/camelContext.xml"});
-		final CamelContext camel = SpringCamelContext.springCamelContext(context);
-
-		final Main main = new Main();
-		main.enableHangupSupport();
-		main.addRouteBuilder(new RouteBuilder() {
-
-			@Override
-			public void configure() throws Exception {
-				addRoutesToCamelContext(camel);
-			}
-		});
-		main.run(args);
+		SpringCamelContext.springCamelContext("META-INF/spring/camelContext.xml");
 	}
 }
