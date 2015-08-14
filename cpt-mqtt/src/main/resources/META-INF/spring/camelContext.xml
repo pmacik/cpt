@@ -16,7 +16,7 @@
 		<camel:route customId="true" id="consumer-route">
 			<camel:from uri="mqtt://mqtt-server?subscribeTopicName=cpt-mqtt-topic&amp;host=tcp://${server.host}:${server.port}/&amp;qualityOfService=ExactlyOnce"/>
 			<camel:to uri="bean:cptBean?method=process"/>
-			<!--log message="The message contains ${body}" /-->
+			<camel:to uri="mqtt://mqtt-server?publishTopicName=cpt-mqtt-response-topic&amp;host=tcp://${server.host}:${server.port}/&amp;qualityOfService=ExactlyOnce"/>
 		</camel:route>
 	</camel:camelContext>
 </beans>
