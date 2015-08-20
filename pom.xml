@@ -7,9 +7,9 @@
    <packaging>pom</packaging>
    <name>C.P.T.</name>
    <modules>
-      <module>cpt-jetty</module>
+      <module>cpt-jetty-java</module>
       <module>cpt-jetty-spring</module>
-      <module>cpt-mqtt</module>
+      <module>cpt-mqtt-java</module>
       <module>cpt-mqtt-spring</module>
    </modules>
    <properties>
