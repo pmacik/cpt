@@ -59,7 +59,7 @@
             <extensions>true</extensions>
             <configuration>
                <instructions>
-                  <Bundle-SymbolicName>cpt-mqtt</Bundle-SymbolicName>
+                  <Bundle-SymbolicName>cpt-mqtt-spring</Bundle-SymbolicName>
                   <Import-Package>*</Import-Package>
                </instructions>
             </configuration>
@@ -84,7 +84,6 @@
                <plugin>
                   <groupId>org.apache.maven.plugins</groupId>
                   <artifactId>maven-shade-plugin</artifactId>
-                  <version>2.3</version>
                   <executions>
                      <execution>
                         <phase>package</phase>

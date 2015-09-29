@@ -8,7 +8,7 @@
    </sender>
    <reporting>
       <reporter class="WarmUpReporter"/>
-      <reporter class="ThroughputStatsReporter">
+      <reporter class="IterationsPerSecondReporter">
          <destination class="CsvDestination">
             <period type="time" value="1000"/>
             <property name="path" value="${perfcake.scenario}-throughput-stats-${perfcake.run.timestamp}.csv"/>
@@ -18,7 +18,7 @@
          </destination>
          <destination class="ChartDestination">
             <period type="time" value="1000"/>
-            <property name="attributes" value="Result,Average"/>
+            <property name="attributes" value="Result"/>
             <property name="outputDir" value="${perfcake.scenario}-charts"/>
             <property name="yAxis" value="Iterations per second"/>
             <property name="name" value="Throughput (${perfcake.scenario})"/>

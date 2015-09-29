@@ -16,7 +16,9 @@
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
       <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
       <version.maven.compiler.plugin>3.0</version.maven.compiler.plugin>
+      <version.maven.bundle.plugin>2.4.0</version.maven.bundle.plugin>
       <version.maven.resources.plugin>2.7</version.maven.resources.plugin>
+      <version.maven.shade.plugin>2.4.1</version.maven.shade.plugin>
       <version.camel>2.15.1.redhat-620133</version.camel>
       <version.slf4j>1.7.5</version.slf4j>
       <version.log4j>1.2.17</version.log4j>
@@ -91,6 +93,16 @@
                <configuration>
                   <encoding>UTF-8</encoding>
                </configuration>
+            </plugin>
+            <plugin>
+               <groupId>org.apache.felix</groupId>
+               <artifactId>maven-bundle-plugin</artifactId>
+               <version>${version.maven.bundle.plugin}</version>
+            </plugin>
+            <plugin>
+               <groupId>org.apache.maven.plugins</groupId>
+               <artifactId>maven-shade-plugin</artifactId>
+               <version>${version.maven.shade.plugin}</version>
             </plugin>
          </plugins>
       </pluginManagement>
