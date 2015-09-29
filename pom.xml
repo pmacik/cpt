@@ -11,6 +11,8 @@
       <module>cpt-jetty-spring</module>
       <module>cpt-mqtt-java</module>
       <module>cpt-mqtt-spring</module>
+      <module>cpt-restlet-java</module>
+      <module>cpt-restlet-spring</module>
    </modules>
    <properties>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

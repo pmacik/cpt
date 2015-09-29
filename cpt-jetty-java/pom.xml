@@ -31,7 +31,6 @@
             <includes>
                <include>*.properties</include>
                <include>META-INF/**</include>
-               <include>META-INF/spring/camelContext.xml</include>
             </includes>
          </resource>
       </resources>

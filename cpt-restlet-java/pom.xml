@@ -8,23 +8,18 @@
       <relativePath>../pom.xml</relativePath>
    </parent>
    <packaging>bundle</packaging>
-   <artifactId>cpt-jetty-spring</artifactId>
+   <artifactId>cpt-restlet-java</artifactId>
    <version>1.0.0-SNAPSHOT</version>
-   <name>C.P.T. - Jetty (Spring)</name>
+   <name>C.P.T. - Restlet</name>
    <properties>
       <server.host>localhost</server.host>
-      <server.port>8181</server.port>
+      <server.port>8080</server.port>
    </properties>
    <dependencies>
       <!-- camel -->
       <dependency>
          <groupId>org.apache.camel</groupId>
-         <artifactId>camel-jetty</artifactId>
-         <version>${version.camel}</version>
-      </dependency>
-      <dependency>
-         <groupId>org.apache.camel</groupId>
-         <artifactId>camel-spring</artifactId>
+         <artifactId>camel-restlet</artifactId>
          <version>${version.camel}</version>
       </dependency>
    </dependencies>
@@ -36,7 +31,6 @@
             <includes>
                <include>*.properties</include>
                <include>META-INF/**</include>
-               <include>META-INF/spring/camelContext.xml</include>
             </includes>
          </resource>
       </resources>
@@ -48,16 +42,27 @@
             <extensions>true</extensions>
             <configuration>
                <instructions>
-                  <Bundle-SymbolicName>cpt-jetty-spring</Bundle-SymbolicName>
+                  <Bundle-SymbolicName>cpt-restlet-java</Bundle-SymbolicName>
                   <Import-Package>*</Import-Package>
                </instructions>
             </configuration>
          </plugin>
-         <!-- to run the example using mvn camel:run -->
          <plugin>
-            <groupId>org.apache.camel</groupId>
-            <artifactId>camel-maven-plugin</artifactId>
-            <version>${version.camel}</version>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <configuration>
+               <mainClass>org.pmacik.cpt.CamelMain</mainClass>
+               <systemProperties>
+                  <systemProperty>
+                     <key>server.host</key>
+                     <value>${server.host}</value>
+                  </systemProperty>
+                  <systemProperty>
+                     <key>server.port</key>
+                     <value>${server.port}</value>
+                  </systemProperty>
+               </systemProperties>
+            </configuration>
          </plugin>
       </plugins>
    </build>
@@ -93,7 +98,7 @@
                            </filters>
                            <transformers>
                               <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                 <mainClass>org.pmacik.cpt.jetty.spring.CamelMain</mainClass>
+                                 <mainClass>org.pmacik.cpt.CamelMain</mainClass>
                               </transformer>
                               <transformer
                                     implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">

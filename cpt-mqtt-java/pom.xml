@@ -13,7 +13,7 @@
    <name>C.P.T. - MQTT</name>
    <properties>
       <server.host>localhost</server.host>
-      <server.port>61616</server.port>
+      <server.port>60606</server.port>
       <version.activemq>5.11.0.redhat-620133</version.activemq>
    </properties>
    <dependencies>
@@ -47,7 +47,6 @@
             <includes>
                <include>*.properties</include>
                <include>META-INF/**</include>
-               <include>META-INF/spring/camelContext.xml</include>
             </includes>
          </resource>
       </resources>
