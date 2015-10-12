@@ -6,7 +6,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
          http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd
          http://activemq.apache.org/schema/core http://activemq.apache.org/schema/core/activemq-core.xsd">
-   <bean id="cptBean" class="org.pmacik.cpt.CptBean"/>
+   <bean id="cptBean" class="org.pmacik.cpt.mqtt.spring.CptBean"/>
    <amq:broker useJmx="true" persistent="false">
       <amq:transportConnectors>
          <amq:transportConnector name="mqtt" uri="mqtt://${server.host}:${server.port}"/>
