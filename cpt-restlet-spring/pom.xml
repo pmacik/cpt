@@ -95,12 +95,10 @@
                               <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                  <mainClass>org.pmacik.cpt.restlet.spring.CamelMain</mainClass>
                               </transformer>
-                              <transformer
-                                    implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                              <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
                                  <resource>META-INF/spring.handlers</resource>
                               </transformer>
-                              <transformer
-                                    implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                              <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
                                  <resource>META-INF/spring.schemas</resource>
                               </transformer>
                            </transformers>
