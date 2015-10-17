@@ -8,7 +8,6 @@
    <name>C.P.T.</name>
    <modules>
       <module>cpt-cxfbean-jaxrs-java</module>
-      <module>cpt-cxfbean-jaxws-java</module>
       <module>cpt-jetty-java</module>
       <module>cpt-jetty-spring</module>
       <module>cpt-mqtt-java</module>
