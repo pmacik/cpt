@@ -8,7 +8,7 @@
    </amq:broker>
    <camel:camelContext trace="false">
       <camel:route customId="true" id="consumer-route">
-         <camel:from uri="mqtt://mqtt-server?subscribeTopicName=cpt-mqtt-spring-request&amp;host=tcp://${server.host}:${server.port}/&amp;qualityOfService=ExactlyOnce"/>
+         <camel:from uri="mqtt://mqtt-server?subscribeTopicNames=cpt-mqtt-spring-request&amp;host=tcp://${server.host}:${server.port}/&amp;qualityOfService=ExactlyOnce"/>
          <camel:to uri="bean:cptBean?method=process"/>
          <camel:to uri="mqtt://mqtt-server?publishTopicName=cpt-mqtt-spring-response&amp;host=tcp://${server.host}:${server.port}/&amp;qualityOfService=ExactlyOnce"/>
       </camel:route>
