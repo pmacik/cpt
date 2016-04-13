@@ -22,9 +22,9 @@
       <version.maven.bundle.plugin>2.4.0</version.maven.bundle.plugin>
       <version.maven.resources.plugin>2.7</version.maven.resources.plugin>
       <version.maven.shade.plugin>2.4.1</version.maven.shade.plugin>
-      <version.camel>2.16.0</version.camel>
-      <version.cxf>3.1.2</version.cxf>
-      <version.activemq>5.12.0</version.activemq>
+      <version.camel>2.17.0</version.camel>
+      <version.cxf>3.1.6</version.cxf>
+      <version.activemq>5.13.2</version.activemq>
       <version.slf4j>1.7.5</version.slf4j>
       <version.log4j>1.2.17</version.log4j>
    </properties>
